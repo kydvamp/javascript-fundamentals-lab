@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f4f6;
+}
+
+/* Counter card */
+.counter {
+    background: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 280px;
+}
+
+/* Number display */
+#count {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #111827;
+}
+
+/* Increment / decrement buttons */
+.counter-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.counter-btns button {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+/* Decrement */
+#decrement-btn {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+#decrement-btn:hover {
+    background: #d1d5db;
+}
+
+/* Increment */
+#increment-btn {
+    background: #2563eb;
+    color: white;
+}
+
+#increment-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Press effect */
+.counter-btns button:active {
+    transform: scale(0.92);
+}
+
+/* Reset button */
+.reset-btn button {
+    background: transparent;
+    border: 1px solid #9ca3af;
+    color: #374151;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.reset-btn button:hover {
+    background: #111827;
+    color: white;
+}
+
+/* Hide decrement button when zero */
