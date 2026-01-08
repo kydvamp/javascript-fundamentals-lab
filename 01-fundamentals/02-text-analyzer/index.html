@@ -4,21 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Analyzer</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="textInputSection"></div>
-    <h1>Text Analyzer</h1>
-    <textarea name="textInput" id="text-input" cols="30" rows="10" placeholder="Type or paste your text here..."></textarea>
-    <button id="analyze-btn">Analyze Text</button>
-    </div>
+    <header>
+        <h1>Text Analyzer</h1>
+    </header>
 
-    <div class="resultsSection">
-        <h2>Analysis Results:</h2>
-        <p id="word-count">Word Count:</p>
-        <p id="char-count">Character Count:</p>
-        <p id="sentence-count">Sentence Count:</p>
-    </div>
+    <main>
+        <section class="text-input-section">
+            <textarea 
+                name="textInput" 
+                id="textInput" 
+                cols="30" 
+                rows="10" 
+                placeholder="Type or paste your text here...">
+            </textarea>
+            <button id="analyzeBtn">Analyze Text</button>
+            <button id="clearBtn">Clear</button>
+        </section>
+
+        <section class="results-section">
+            <h2>Analysis Results:</h2>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Word Count:</span>
+                    <span class="stat-value" id="wordCount">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Character Count:</span>
+                    <span class="stat-value" id="charCount">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Sentence Count:</span>
+                    <span class="stat-value" id="sentenceCount">0</span>
+                </div>
+            </div>
+            <p id="statusMessage" class="status-message"></p>
+        </section>
+    </main>
+
     <script src="scripts.js" defer></script>
 </body>
 </html>
