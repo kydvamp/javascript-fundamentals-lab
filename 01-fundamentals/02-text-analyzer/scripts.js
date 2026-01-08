@@ -4,6 +4,7 @@ let charCountEl = document.getElementById("charCount");
 let sentenceCountEl = document.getElementById("sentenceCount");
 let statusMessageEl = document.getElementById("statusMessage");
 const analyzeBtnEl = document.getElementById("analyzeBtn");
+const clearBtnEl = document.getElementById("clearBtn");
 
 function analyzeText() {
     const text = inputTextEl.value;
@@ -40,6 +41,11 @@ function updateUI({ wordCount, charCount, sentenceCount, statusMessage }) {
 analyzeBtnEl.addEventListener("click", () => {
     const analysisResult = analyzeText();
     updateUI(analysisResult);
+});
+
+clearBtnEl.addEventListener("click", () => {
+    inputTextEl.value = "";
+    updateUI({ wordCount: 0, charCount: 0, sentenceCount: 0, statusMessage: "" });
 });
 
 
